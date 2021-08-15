@@ -3,19 +3,18 @@ import HeaderTop from './HeaderTop';
 import Menu from './Menu';
 import Search from './Search';
 import Carousel from './Carousel';
-import JobContent from './JobContent';
-import Pagination from './Pagination';
+import { BrowserRouter as Router} from "react-router-dom";
+import RouterURL from '../routers/RouterURL';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <HeaderTop/>
       <Menu/>
       <Search/>
       <Carousel/>
-      <JobContent/>
-      <Pagination/>
-    </div>
+      <RouterURL/>
+    </Router>
   );
 }
 

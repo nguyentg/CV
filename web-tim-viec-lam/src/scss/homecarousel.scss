@@ -1,0 +1,33 @@
+
+@mixin formatButton {
+    position: absolute;
+    background-color: #34495e;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .25rem;
+    top: 40%;
+}
+
+.home-carousel {
+    margin-top: 3rem;
+    #carousel-image {
+        position: relative;
+        ol.carousel-indicators {
+            li{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%
+            }
+        }
+
+        a.carousel-control-prev {
+            @include formatButton();
+            left: -2%
+        }
+
+        a.carousel-control-next {
+            @include formatButton();
+            right: -2%;
+        }
+    }
+}

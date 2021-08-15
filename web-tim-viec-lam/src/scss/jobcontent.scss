@@ -32,11 +32,10 @@ $imgSize: 70px;
     .col-sm-4 { 
         @include reset;
         padding-right: $jobPadding;
-    
         &:nth-child(3n+3){
             padding-right: 0;
+            
         }
-        
     }
     .content-title {
         border-radius: .25rem;
@@ -74,6 +73,7 @@ $imgSize: 70px;
     }
 
     .content-body {
+        text-align: center;
         .job-item {
             @include reset;
             border: 1px solid gray;
@@ -83,7 +83,6 @@ $imgSize: 70px;
             margin-top: .5rem;
             border-radius: .25rem;
             padding-right: 0;
-
             figure {
                 width: 25%;
                 margin-right: 1%;

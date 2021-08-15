@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import './../scss/jobcontent.css';
+import './../../scss/jobcontent.css';
+import Pagination from '../Pagination';
 
 export default class JobContent extends Component {
     render() {
         return (
+            <>
             <div className="container-fluid">
                 <div className="content-job">
                     <div className="content-title">
@@ -339,6 +341,8 @@ export default class JobContent extends Component {
                 </div>
                 
             </div>
+            <Pagination/>
+            </>
         )
     }
 }

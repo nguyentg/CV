@@ -1,37 +1,37 @@
 import React, { Component } from 'react'
 import './../scss/menu.css'
+import { NavLink } from 'react-router-dom'
 export default class Menu extends Component {
     render() {
         return (
             <div className="menu-logo">
                 {/* <div className="container"> */}
-                    <nav class="navbar navbar-expand-sm navbar-light bg-light nav-menu-top">
-                        <a class="navbar-brand" href="/"><img src="/logo.png" alt="logo"></img></a>
-                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                    <nav className="navbar navbar-expand-sm navbar-light bg-light nav-menu-top">
+                        <NavLink className="navbar-brand" to="/"><img src="/logo.png" alt="logo"></img></NavLink>
+                        <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavId">
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-sm-right menu-top-right text-sm-left text-xs-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="/">Trang chủ</a>
+                        <div className="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul className="navbar-nav mr-auto mt-2 mt-lg-0 float-sm-right menu-top-right text-sm-left text-xs-center">
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/">Trang chủ</NavLink>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/">Việc làm</a>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/viec-lam">Việc làm</NavLink>
                                 </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="/">Quản lý CV</a>
+                                <li className="nav-item active">
+                                    <NavLink className="nav-link" to="/quan-ly-cv">Quản lý CV</NavLink>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/">Công ty</a>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/cong-ty">Công ty</NavLink>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/">Khám phá</a>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/kham-pha">Khám phá</NavLink>
                                 </li>
                             </ul>
                         </div>
                     </nav>
-                {/* </div> */}
-                
+                {/* </div> */}    
             </div>
 
         )

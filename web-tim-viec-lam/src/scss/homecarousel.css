@@ -1,0 +1,26 @@
+.home-carousel {
+  margin-top: 3rem; }
+  .home-carousel #carousel-image {
+    position: relative; }
+    .home-carousel #carousel-image ol.carousel-indicators li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%; }
+    .home-carousel #carousel-image a.carousel-control-prev {
+      position: absolute;
+      background-color: #34495e;
+      width: 3rem;
+      height: 3rem;
+      border-radius: .25rem;
+      top: 40%;
+      left: -2%; }
+    .home-carousel #carousel-image a.carousel-control-next {
+      position: absolute;
+      background-color: #34495e;
+      width: 3rem;
+      height: 3rem;
+      border-radius: .25rem;
+      top: 40%;
+      right: -2%; }
+
+/*# sourceMappingURL=homecarousel.css.map */
