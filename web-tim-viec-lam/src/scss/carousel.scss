@@ -1,0 +1,54 @@
+
+@mixin formatButton {
+    background-color: #2c3e50;
+    padding: .5rem .5rem;
+    border-radius: 1rem;
+    position: absolute;
+}
+
+.carousel {
+    margin-top: 1rem;
+
+    #slide-image {
+        ol.carousel-indicators {
+            li {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+        }
+        span.carousel-prev-icon{
+            @include formatButton;
+            left: 10rem;
+            i {
+                font-size: 2rem;
+            }
+        }
+
+        span.carousel-next-icon{
+            @include formatButton;
+            right: 10rem;
+            i {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .content {
+        height: 7rem;
+        line-height: 7rem;
+        font-size: 1.6rem;
+        color: gray;
+
+        strong { color: #2c3e50; }
+
+        button {
+            margin-left: 2rem; 
+            text-transform: uppercase;
+            font: {
+                weight: bolder;
+                size: 20px;
+            }
+        }
+    }
+}

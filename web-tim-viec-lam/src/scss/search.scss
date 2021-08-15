@@ -1,0 +1,17 @@
+$height: 90px;
+$mauxanhdam: #2c3e50;
+
+.search {
+    height: $height;
+    display: flex;
+    align-items: center;
+    background-color: $mauxanhdam;
+
+    .col-sm-5 {
+        .keyword{
+            border-radius: .25rem;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}

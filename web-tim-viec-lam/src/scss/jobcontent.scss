@@ -1,0 +1,138 @@
+
+$titleHeight: 65px;
+$titleColor: #00b14f;
+$wordColor: white;
+$titleSize: 25px;
+$iconColor: #fbc531;
+$iconSize: 30px;
+$fontTitle: 15px;
+$jobHeight: 7rem;
+$jobPadding: .5rem;
+$imgSize: 70px;
+
+@mixin  reset {
+    margin: 0; 
+    padding: 0;
+}
+
+@mixin icon {
+    width: 50%;
+    font-size: $fontTitle;
+    i { color: #2ed573;}
+}
+
+.content-job {
+    width: 100%;
+    height: 6.4 * $jobHeight;
+    border: 1px solid gray;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+
+    .col-sm-4 { 
+        @include reset;
+        padding-right: $jobPadding;
+    
+        &:nth-child(3n+3){
+            padding-right: 0;
+        }
+        
+    }
+    .content-title {
+        border-radius: .25rem;
+        height: $titleHeight;
+        line-height: $titleHeight;
+        background-color: $titleColor;
+        position: relative;
+        width: 100%;
+
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 3%;
+            transform: translate(-3%, -50%);
+            font: {
+                size: $titleSize;
+            }
+            text-transform: uppercase;
+            color: $wordColor;
+
+            i {
+                color: $iconColor;
+                font-size: $iconSize;
+            }
+        }
+
+        span {
+            color: $wordColor;
+            a {
+                color: $wordColor;
+                text-decoration: none;
+                margin-right: .8rem;
+            }
+        }
+    }
+
+    .content-body {
+        .job-item {
+            @include reset;
+            border: 1px solid gray;
+            width: 94%;
+            display: inline-flex;
+            height: $jobHeight;
+            margin-top: .5rem;
+            border-radius: .25rem;
+            padding-right: 0;
+
+            figure {
+                width: 25%;
+                margin-right: 1%;
+                img{
+                    width: $imgSize;
+                    height: $imgSize;
+                    background-size: cover;
+                    object-fit: cover;
+                }
+            }
+
+            .job-item-content {
+                @include reset;
+                text-align: left;
+                width: 74%;
+                p.title {
+                    @include reset;
+                    a {
+                        font: {
+                            size: $fontTitle;
+                            weight: bolder;
+                        }
+                        text-decoration: none;
+                        color: #666;
+                    }
+                }
+
+                p.company {
+                    @include reset;
+                    a {
+                        font-size: $fontTitle;
+                        text-decoration: none;
+                        color: #718093;
+                    }
+                }
+
+                div {
+                    @include reset;
+                    display: flex;
+                    .salary {
+                        @include icon;
+                    }
+
+                    .address {
+                        @include icon;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,42 @@
+$mauxanhdam: #2c3e50;
+$cochumenu: 15px;
+$logoheight: 90px;
+
+@mixin reset() {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-logo {
+	height: $logoheight;
+	line-height: $logoheight;
+
+	.nav-menu-top {
+		@include reset;
+
+		a.navbar-brand {
+			@include reset;
+            margin-left: 15rem;
+		}
+        #collapsibleNavId {
+            margin-left: 9rem;
+            ul.menu-top-right {
+                li.nav-item {
+                    a.nav-link {
+                        @include reset;
+                        font: {
+                            size: $cochumenu;
+                            weight: bolder;
+                        }
+                        padding-right: 26px;
+                        padding-left: 26px;
+                        text-transform: uppercase;
+                        color: $mauxanhdam;
+                    }
+                }
+            }
+        }
+		
+	}
+	
+}
