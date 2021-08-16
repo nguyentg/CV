@@ -25,7 +25,8 @@
     height: 7rem;
     line-height: 7rem;
     font-size: 1.6rem;
-    color: gray; }
+    color: gray;
+    padding-top: 0; }
     .carousel .content strong {
       color: #2c3e50; }
     .carousel .content button {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 import './../scss/herdertop.css';
 
 export default class HeaderTop extends Component {
@@ -9,12 +10,12 @@ export default class HeaderTop extends Component {
                     <div className="row">
                         <div className="col-sm-6 left">
                             <div className="top-dangtintuyendung">
-                                <button className="btn btn-dangtin">
+                                <NavLink to="/viec-lam" className="btn btn-dangtin">
                                     nhà tuyển dụng <br/>
                                     <span>
                                         Đăng tuyển và Tìm hồ sơ
                                     </span>
-                                </button>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="col-sm-6 right text-sm-right text-center">
