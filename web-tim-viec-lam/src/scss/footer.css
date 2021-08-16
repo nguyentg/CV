@@ -1,0 +1,59 @@
+.footer .footer-top {
+  background: #151515;
+  color: white;
+  line-height: 24px;
+  font-size: 14px;
+  color: #888;
+  padding-top: 113px;
+  padding-bottom: 100px; }
+  .footer .footer-top .cotf1 p {
+    padding-top: 17px; }
+  .footer .footer-top .cotf1 .motdong {
+    overflow: hidden;
+    padding: 3px 0; }
+    .footer .footer-top .cotf1 .motdong i.fa {
+      padding-right: 20px;
+      float: left;
+      padding-top: 6px;
+      color: #ababab;
+      font-size: 16px; }
+      .footer .footer-top .cotf1 .motdong i.fa fa-paper-plane-o {
+        padding-bottom: 23px; }
+  .footer .footer-top h2.tdft {
+    font-size: 40px;
+    color: #ccc;
+    font-family: roboto slab;
+    position: relative;
+    margin-bottom: 38px; }
+    .footer .footer-top h2.tdft:after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: #feb518;
+      top: 55px;
+      position: absolute; }
+  .footer .footer-top .openning {
+    border-bottom: 1px dotted gray;
+    height: 28px;
+    margin-bottom: 13px;
+    margin-top: 2.5rem; }
+    .footer .footer-top .openning:last-child .phai.float-xs-right {
+      padding-left: 27.5rem; }
+    .footer .footer-top .openning .trai {
+      background: #151515;
+      float: left;
+      transform: translateY(-22px);
+      padding-right: 10px; }
+    .footer .footer-top .openning .phai.float-xs-right {
+      background: #151515;
+      transform: translateY(3px);
+      padding-left: 25.8rem; }
+.footer .footer-bottom {
+  line-height: 91px;
+  height: 91px;
+  color: #999;
+  font-size: 13px;
+  background: #111; }
+
+/*# sourceMappingURL=footer.css.map */

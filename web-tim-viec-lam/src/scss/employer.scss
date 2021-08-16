@@ -1,0 +1,49 @@
+
+$widthBody: 1500px;
+$width: 15px;
+$heightImage: 8rem;
+
+.content {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    height: 41rem;
+    margin: auto;
+    background-color: white;
+    .title {
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 5rem;
+        i{
+            color: #27ae60;
+            margin-right: .5rem;
+        }
+    }
+
+    .body {
+        display: flex;
+        width: $widthBody;
+        flex-wrap: wrap;
+        .image {
+            border: 1px solid gray;
+            width: ($widthBody / 6) - (5 * $width);
+            height: 10rem;
+            margin-right: $width;
+            margin-bottom: $width;
+            border-radius: .25rem;
+            position: relative;
+            &:nth-child(6n+6){
+                margin-right: 0;
+            }
+
+            img {
+                object-fit: cover;
+                position: absolute;
+                background-size: cover;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+               
+            }
+        }
+    }
+}

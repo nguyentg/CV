@@ -1,0 +1,36 @@
+.content {
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+  height: 41rem;
+  margin: auto;
+  background-color: white; }
+  .content .title {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 5rem; }
+    .content .title i {
+      color: #27ae60;
+      margin-right: .5rem; }
+  .content .body {
+    display: flex;
+    width: 1500px;
+    flex-wrap: wrap; }
+    .content .body .image {
+      border: 1px solid gray;
+      width: 175px;
+      height: 10rem;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      border-radius: .25rem;
+      position: relative; }
+      .content .body .image:nth-child(6n+6) {
+        margin-right: 0; }
+      .content .body .image img {
+        object-fit: cover;
+        position: absolute;
+        background-size: cover;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=employer.css.map */
