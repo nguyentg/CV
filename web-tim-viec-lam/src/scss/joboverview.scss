@@ -1,0 +1,108 @@
+$background: rgb(223, 221, 221);
+$white: white;
+$green: #32CD32;
+$black: #000000;
+$font0: 15px;
+$font1: 12px;
+$font2: 10px;
+$font3: 8px;
+
+
+.overview
+{
+    background: $background;
+    border: 2px;
+    margin: 10px 100px;
+    padding: 10px;
+    .thedieuhuong
+    {
+        background: $background;
+        font-weight: bolder;
+    }
+    .card 
+    {
+        background: $white;
+        font-size: $font3;
+        display: flex;  
+        flex-direction: row;
+        border: 2px;
+        width: 100%;
+
+        .img-card {
+            width: 30%;
+        }
+        
+        .company-inf-card {
+            width: 48%;
+            text-align: left;
+            vertical-align: middle;
+        
+            h4 {
+                font-weight: bolder;
+                color: 	#32CD32;
+            }
+            h6 {
+                font-weight: bolder;
+                color: 	#000200;
+            }
+            .inf {
+                font-size: medium;
+            }
+        }
+        
+    }
+
+    .thanh
+    {
+        width: 100%;
+        background-color: $background;
+        font-size: $font0;
+        font-weight: bold;
+        color: $black;
+        .active {
+            border-bottom-style: solid;
+        }
+    }
+    
+    .detail
+    {
+        text-align: left;
+
+        h4{
+            font-size: $font0;
+        }
+        ul.a {
+            list-style-type: circle;
+        }
+        .content{
+            padding: 15px;
+            font-size: $font0;
+        }
+    }
+
+    .button-card {
+        width: 20%;
+        margin: auto; /*Căn giữa phần tử*/
+        text-align: center; /*căn giữa văn bản*/
+        .btn {
+            font-size: medium;
+            font-weight: bolder;
+            border-radius: 10px;
+            width: 80%;
+            height: 40px;
+        }        
+    }
+
+    .green {
+        background-color: $green;    
+        color: $white;    
+    }
+    .white {
+        background-color: $background;
+        color: $black;
+    }
+    .greenword{
+        color: $green;
+    }
+}
+
