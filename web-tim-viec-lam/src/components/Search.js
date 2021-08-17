@@ -1,7 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './../scss/search.css';
 
-export default class Search extends Component {
+class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
+
+    printListMajor = () => {
+        return this.props.listMajor.map(value => {
+            return <option value={value._id}>{value.name}</option>;
+        })
+    }
+    
     render() {
         return (
             <div className="search">
@@ -14,7 +28,9 @@ export default class Search extends Component {
                                 </div>
                                 <input list="danhsach" type="text" className="form-control keyword" placeholder="Tên công việc, vị trí bạn muốn ứng tuyển." />
                                 <datalist id="danhsach">
-                                    <option value="Công nghệ thông tin"></option>
+                                    <option value="Back-End Developer"></option>
+                                    <option value="Front-End Developer"></option>
+                                    <option value="FullStack Developer"></option>
                                     <option value="Kĩ thuật dữ liệu"></option>
                                     <option value="Kế toán"></option>
                                     <option value="Tài chính ngân hàng"></option>
@@ -30,10 +46,9 @@ export default class Search extends Component {
                                 </div>
                                 <select className="custom-select">
                                     <option>Địa điểm.</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
+                                    <option>Hồ Chí Minh</option>
+                                    <option>Hà Nội</option>
+                                    <option>Đà Nẵng</option>
                                 </select>
                             </div>
                         </div>
@@ -44,10 +59,7 @@ export default class Search extends Component {
                                 </div>
                                 <select className="custom-select">
                                     <option>Ngành nghề.</option>
-                                    <option>option 2</option>
-                                    <option>option 3</option>
-                                    <option>option 4</option>
-                                    <option>option 5</option>
+                                    {this.printListMajor()}
                                 </select>
                             </div>
                         </div>
@@ -58,6 +70,21 @@ export default class Search extends Component {
                 </div>	
             </div>
 
-        )
+        );
     }
 }
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        listMajor: state.majorState.listMajor
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        dispatch1: () => {
+            dispatch({type:''})
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Search)

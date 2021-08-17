@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const mongoose = require('mongoose');
+const config = require('config');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -36,6 +37,14 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+mongoose.connect( process.env.EXPRESS_APP_MONGODB_URL || config.get('EXPRESS_APP_MONGODB_URL'),
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
+
+mongoose.connection.on('connected', () => {
+  console.log("Mongoose is connected !!!");
 });
 
 module.exports = app;
